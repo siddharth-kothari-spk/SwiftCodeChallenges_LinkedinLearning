@@ -26,5 +26,9 @@ func isPrime(number: Int) -> Bool {
     return count == 1
 }
 
-let test = findPrime(numbers: [2,4,5,6,7,8,9,10,11,13])
-print(test)
+
+print(findPrime(numbers: [2,4,5,6,7,8,9,10,11,13]))
+
+// no prime check
+print(findPrime(numbers: [4,6,8,9,10]))
+
