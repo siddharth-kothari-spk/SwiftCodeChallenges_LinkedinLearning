@@ -7,9 +7,12 @@ func swapValues<T: Comparable>( value1: inout T, value2: inout T) {
         print("no swap needed")
         return
     }
-    let temp = value1
+   /* let temp = value1
     value1 = value2
-    value2 = temp
+    value2 = temp */
+    
+    // using tuple
+    (value1, value2) = (value2, value1)
 }
 
 //swapValues(value1: 10, value2: 15) // Error: Cannot pass immutable value as inout argument: literals are not mutable
