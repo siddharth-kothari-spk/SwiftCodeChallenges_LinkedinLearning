@@ -7,4 +7,4 @@
 4 Count days between dates
 5 calculate sum(n)
 6 rock paper scissor
-
+7 dictionary to json
