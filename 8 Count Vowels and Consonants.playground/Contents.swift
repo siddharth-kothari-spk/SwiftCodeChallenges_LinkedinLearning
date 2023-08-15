@@ -4,8 +4,9 @@ func findVowelsAndConsonants(_ str: String) {
     let myVowel = "aeious"
     let myconsonant = "bcdfghijklmnpqrtvwxyz"
     
-    let testString = str.lowercased()
-    
+    print(str.count)
+    let testString = str.filter{$0.isLetter}.lowercased()
+    print(testString.count)
     var vowel = 0
     var consonant = 0
     
