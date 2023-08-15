@@ -17,3 +17,6 @@ func generatePassword(_ length: Int) -> String {
 
 print(generatePassword(5))
 print(generatePassword(10))
+
+// https://gist.github.com/brennanMKE/7b740c57cabfe16f337464f504fcb100
+
