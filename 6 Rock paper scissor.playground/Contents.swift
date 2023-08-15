@@ -1,6 +1,6 @@
 import Foundation
 
-enum Choice: String {
+enum Choice: String, CaseIterable {
     case rock
     case paper
     case scissor
@@ -13,7 +13,10 @@ enum Output: String {
 }
 
 func play(choice: Choice) -> Output {
-    let compChoice = [Choice.paper, Choice.rock, Choice.scissor].randomElement()
+   // let compChoice = [Choice.paper, Choice.rock, Choice.scissor].randomElement()
+    guard let compChoice = Choice.allCases.randomElement() else {
+        return .win
+    }
     var result = Output.draw
     print("Computer: \(String(describing: compChoice))")
     switch (choice, compChoice) {
