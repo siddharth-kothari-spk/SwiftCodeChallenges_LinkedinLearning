@@ -4,12 +4,15 @@ import Foundation
 
 func findSmallestPositiveMissingNumber(_ numbers: [Int]) -> Int {
     var result = 1
-    var numbersSorted = numbers.sorted()
+    let numbersSorted = numbers.sorted()
     
     if let greatest = numbersSorted.last, greatest <= 0 {
         // input contains only negative numbers
         return result
     }
+    
+    // remove all -ve and 0 from list
+    let positiveSortedNumbers = numbersSorted.filter{$0 > 0}
     
     for index in 0..<numbers.count {
         let num = numbersSorted[index]
