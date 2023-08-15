@@ -2,9 +2,9 @@ import Foundation
 
 func palindromeCheck(_ string: String) -> Bool {
     
-    return string == String(string.reversed())
+    return string.caseInsensitiveCompare(String(string.reversed())) == .orderedSame
 }
 
 print(palindromeCheck("madam"))
-print(palindromeCheck("hannah"))
+print(palindromeCheck("Hannah"))
 print(palindromeCheck("baaba"))
