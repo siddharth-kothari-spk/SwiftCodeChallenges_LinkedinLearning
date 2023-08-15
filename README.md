@@ -12,3 +12,4 @@
 9 find missing number
 10 generate random passwords
 11 check palindromes
+12 Storing strings securely
