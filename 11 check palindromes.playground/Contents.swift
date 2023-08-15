@@ -6,7 +6,20 @@ func palindromeCheck(_ string: String) -> Bool {
     guard string.count > 1 else {
         return true
     }
-    return string.caseInsensitiveCompare(String(string.reversed())) == .orderedSame
+   // return string.caseInsensitiveCompare(String(string.reversed())) == .orderedSame
+    
+    let chars = Array(string.lowercased())
+    var leftIndex = 0
+    var rightIndex = chars.count - 1
+    
+    while leftIndex < rightIndex {
+        if chars[leftIndex] != chars[rightIndex] {
+            return false
+        }
+        leftIndex += 1
+        rightIndex -= 1
+    }
+    return true
 }
 
 print(palindromeCheck("madam"))
