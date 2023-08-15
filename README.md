@@ -11,3 +11,4 @@
 8 count vowels and consonants
 9 find missing number
 10 generate random passwords
+11 check palindromes
