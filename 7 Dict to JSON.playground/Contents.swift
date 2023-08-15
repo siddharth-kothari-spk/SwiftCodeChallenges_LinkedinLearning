@@ -15,3 +15,17 @@ if let jsonData = try? JSONSerialization.data(withJSONObject: colorsDict) {
         print(jsonString)
     }
 }
+
+// dict extension
+extension Dictionary {
+    func toJSONString() -> String? {
+        guard let jsonData = try? JSONEncoder().encode(colorsDict) else {
+            return nil
+        }
+        return String(data: jsonData, encoding: .utf8)
+    }
+}
+
+if let jsonString = colorsDict.toJSONString() {
+    print(jsonString)
+}
